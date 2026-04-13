@@ -1,6 +1,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY api/ .
+WORKDIR /src/Trigon.Api
 RUN dotnet restore "Trigon.Api.csproj"
 RUN dotnet publish -c Release -o /out
 
